@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.iftm.atividadeComplementar.domains.LancamentoAtividade;
-import br.edu.iftm.atividadeComplementar.repositories.AtividadeRepository;
+import br.edu.iftm.atividadeComplementar.repositories.LancamentoAtividadeRepository;
 
 @Service
 public class LancamentoAtividadeService {
 	
 	@Autowired
-	private AtividadeRepository repository;
+	private LancamentoAtividadeRepository repository;
 	
 	public List<LancamentoAtividade> buscar(Integer codigo) {
 		return repository.findByNomeContaining(codigo);
