@@ -14,3 +14,6 @@ public interface AlunoRepository extends JpaRepository<Aluno,Long>{
 	public List<Aluno> findByNomeContaining(@Param("nome") String nome);
 
 }
+
+
+

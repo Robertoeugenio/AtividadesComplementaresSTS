@@ -19,15 +19,22 @@ public class AlunoRepositoryTest {
 	@Autowired
 	private AlunoRepository repository;
 	
+	
+
 	@Test
-	public void testaAlunoCarlos() {
-		List<Aluno> c = repository.findByNomeContaining("carlos");
+	public void testaListaVazia() {
+		List<Aluno> c = repository.findByNomeContaining("Edeoclaudio");
+		assertThat(c.size()).isEqualTo(0);
+	}
+	@Test
+	public void testaAlunoFransciscano() {
+		List<Aluno> c = repository.findByNomeContaining("Jerosmarildo");
 		assertThat(c.size()).isGreaterThan(0);
 	}
 	
 	@Test
-	public void testaListaVazia() {
-		List<Aluno> c = repository.findByNomeContaining("diogo");
+	public void testaListaFransciscano() {
+		List<Aluno> c = repository.findByNomeContaining("Fransciscano");
 		assertThat(c.size()).isEqualTo(0);
 	}
 

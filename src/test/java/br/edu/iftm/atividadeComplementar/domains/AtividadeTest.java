@@ -18,23 +18,23 @@ public class AtividadeTest {
 	
 	@Test
 	public void testaQuantidadeLimiteHoras() {
-		int percentualMonitoria = 50;
-		int quantidadeHorasSistemasParaInternet = 60;
-		atividade.setNome("Monitoria");
-		atividade.setMaximoAtividadesSemestre(1);
-		atividade.setPercentualPorAtividade(percentualMonitoria);
-		int quantidadeHoras = atividade.getValorLimiteHorasAtividade(quantidadeHorasSistemasParaInternet);
-		Assert.assertEquals(quantidadeHoras,30);
+		int percentualPalestra = 35;
+		int quantidadeHorasSistemasParaInternet = 150;
+		atividade.setNome("Palestra");
+		atividade.setMaximoAtivcodigoadesSemestre(2);
+		atividade.setPercentualPorAtivcodigoade(percentualPalestra);
+		int quantidadeHoras = atividade.getValorLimiteHorasAtivcodigoade(quantidadeHorasSistemasParaInternet);
+		Assert.assertEquals(quantidadeHoras,35);
 	}
-	
+	//fazendo teste
 	@Test
-	public void testaQuantidadeLimiteHorasLicenciatura() {
+	public void testaQuantidadeLimiteHorasOficinaBarulho() {
 		int percentualCurso = 40;
-		int quantidadeHorasLicenciatura = 200;
-		atividade.setNome("Cursos e Minicursos");
-		atividade.setMaximoAtividadesSemestre(2);
-		atividade.setPercentualPorAtividade(percentualCurso);
-		int quantidadeHoras = atividade.getValorLimiteHorasAtividade(quantidadeHorasLicenciatura);
+		int quantidadeHorasOficinaBarulho = 200;
+		atividade.setNome("Oficinas");
+		atividade.setMaximoAtivcodigoadesSemestre(2);
+		atividade.setPercentualPorAtivcodigoade(percentualCurso);
+		int quantidadeHoras = atividade.getValorLimiteHorasAtivcodigoade(quantidadeHorasOficinaBarulho);
 		Assert.assertEquals(quantidadeHoras,80);
 	}
 

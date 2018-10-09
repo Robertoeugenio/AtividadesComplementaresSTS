@@ -7,9 +7,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import br.edu.iftm.atividadeComplementar.domains.Atividade;
-
 @Repository
-public interface AtividadeRepository extends JpaRepository<Atividade,Integer>{
+public interface AtividadeRepository extends JpaRepository<Atividade,Long>{
 	
 	public List<Atividade> findByNomeContaining(@Param("nome") String nome);
 

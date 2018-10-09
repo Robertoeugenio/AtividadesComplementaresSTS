@@ -13,7 +13,7 @@ import br.edu.iftm.atividadeComplementar.repositories.AtividadeRepository;
 
 @Service
 public class AtividadeService {
-	
+
 	@Autowired
 	private AtividadeRepository repository;
 	
@@ -21,16 +21,17 @@ public class AtividadeService {
 		return repository.findByNomeContaining(nome);
 	}
 	
-	public Optional<Atividade> buscarRa(Integer id) {
-		return repository.findById(id);
+	public Optional<Atividade> buscarCodigo(Long codigo) {
+		return repository.findById(codigo);
 	}
 	
 	public List<Atividade> buscarTodos() {
 		return repository.findAll();
 	}
-	
-	
-	
-	
-	
 }
+	
+	
+	
+	
+	
+

@@ -20,15 +20,20 @@ public class AtividadeRepositoryTest {
 	private AtividadeRepository repository;
 	
 	@Test
-	public void testaAlunoCarlos() {
-		List<Atividade> c = repository.findByNomeContaining("comercio eletronico");
+	public void testaEventoPalestra() {
+		List<Atividade> c = repository.findByNomeContaining("Palestra");
 		assertThat(c.size()).isGreaterThan(0);
 	}
 	
 	@Test
-	public void testaListaVaziaAtividade() {
-		List<Atividade> c = repository.findByNomeContaining("dispositivos moveis");
+	public void testaAtividadeOficinaBarulho() {
+		List<Atividade> c = repository.findByNomeContaining("Oficina do barulho");
 		assertThat(c.size()).isEqualTo(0);
 	}
 
+	@Test
+	public void testarhorasCinepipocaListaVazia() {
+		List<Atividade> at = repository.findByNomeContaining("Cinepipoca");
+	}
 }
+

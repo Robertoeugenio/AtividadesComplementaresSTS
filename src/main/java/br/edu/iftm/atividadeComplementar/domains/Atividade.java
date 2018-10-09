@@ -1,53 +1,55 @@
 package br.edu.iftm.atividadeComplementar.domains;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Atividade {
+public class Atividade implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Integer codigo;
 	
 	private String nome;
 	
 	private Integer percentualCargaHoraria;
 	
-	private Integer maximoAtividadesSemestre;
+	private Integer maximoAtivcodigoadesSemestre;
 	
-	private Integer percentualPorAtividade;
+	private Integer percentualPorAtivcodigoade;
 
-	public Atividade(Integer id, String nome, Integer percentualCargaHoraria, Integer maximoAtividadesSemestre,
-			Integer percentualPorAtividade) {
+	public Atividade(Integer codigo, String nome, Integer percentualCargaHoraria, Integer maximoAtivcodigoadesSemestre,
+			Integer percentualPorAtivcodigoade) {
 		super();
-		this.id = id;
+		this.codigo = codigo;
 		this.nome = nome;
 		this.percentualCargaHoraria = percentualCargaHoraria;
-		this.maximoAtividadesSemestre = maximoAtividadesSemestre;
-		this.percentualPorAtividade = percentualPorAtividade;
+		this.maximoAtivcodigoadesSemestre = maximoAtivcodigoadesSemestre;
+		this.percentualPorAtivcodigoade = percentualPorAtivcodigoade;
 	}
 
 	public Atividade() {
 		super();
 	}
 	
-	public Integer getValorLimiteHorasAtividade(Integer totalHorasComplementares) {
-		return totalHorasComplementares * percentualPorAtividade / 100;
+	public Integer getValorLimiteHorasAtivcodigoade(Integer totalHorasComplementares) {
+		return totalHorasComplementares * percentualPorAtivcodigoade / 100;
 	}
 	
-	public Integer getHorasAproveitadasPorAtividade(Integer totalhorasComplementares) {
-		return getValorLimiteHorasAtividade(totalhorasComplementares) * percentualCargaHoraria / 100; 
+	public Integer getHorasAproveitadasPorAtivcodigoade(Integer totalhorasComplementares) {
+		return getValorLimiteHorasAtivcodigoade(totalhorasComplementares) * percentualCargaHoraria / 100; 
 	}
 
 	public Integer getCodigo() {
-		return id;
+		return codigo;
 	}
 
-	public void setCodigo(Integer id) {
-		this.id = id;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getNome() {
@@ -66,20 +68,20 @@ public class Atividade {
 		this.percentualCargaHoraria = percentualCargaHoraria;
 	}
 
-	public Integer getMaximoAtividadesSemestre() {
-		return maximoAtividadesSemestre;
+	public Integer getMaximoAtivcodigoadesSemestre() {
+		return maximoAtivcodigoadesSemestre;
 	}
 
-	public void setMaximoAtividadesSemestre(Integer maximoAtividadesSemestre) {
-		this.maximoAtividadesSemestre = maximoAtividadesSemestre;
+	public void setMaximoAtivcodigoadesSemestre(Integer maximoAtivcodigoadesSemestre) {
+		this.maximoAtivcodigoadesSemestre = maximoAtivcodigoadesSemestre;
 	}
 
-	public Integer getPercentualPorAtividade() {
-		return percentualPorAtividade;
+	public Integer getPercentualPorAtivcodigoade() {
+		return percentualPorAtivcodigoade;
 	}
 
-	public void setPercentualPorAtividade(Integer percentualPorAtividade) {
-		this.percentualPorAtividade = percentualPorAtividade;
+	public void setPercentualPorAtivcodigoade(Integer percentualPorAtivcodigoade) {
+		this.percentualPorAtivcodigoade = percentualPorAtivcodigoade;
 	}	
 
 }
