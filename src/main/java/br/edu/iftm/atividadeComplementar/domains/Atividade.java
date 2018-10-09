@@ -1,13 +1,16 @@
 package br.edu.iftm.atividadeComplementar.domains;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Atividade {
 	
 	@Id
-	private Integer codigo;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	
 	private String nome;
 	
@@ -17,10 +20,10 @@ public class Atividade {
 	
 	private Integer percentualPorAtividade;
 
-	public Atividade(Integer codigo, String nome, Integer percentualCargaHoraria, Integer maximoAtividadesSemestre,
+	public Atividade(Integer id, String nome, Integer percentualCargaHoraria, Integer maximoAtividadesSemestre,
 			Integer percentualPorAtividade) {
 		super();
-		this.codigo = codigo;
+		this.id = id;
 		this.nome = nome;
 		this.percentualCargaHoraria = percentualCargaHoraria;
 		this.maximoAtividadesSemestre = maximoAtividadesSemestre;
@@ -40,11 +43,11 @@ public class Atividade {
 	}
 
 	public Integer getCodigo() {
-		return codigo;
+		return id;
 	}
 
-	public void setCodigo(Integer codigo) {
-		this.codigo = codigo;
+	public void setCodigo(Integer id) {
+		this.id = id;
 	}
 
 	public String getNome() {

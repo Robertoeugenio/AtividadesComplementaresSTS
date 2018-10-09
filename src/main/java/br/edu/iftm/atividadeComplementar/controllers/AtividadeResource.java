@@ -14,22 +14,22 @@ import br.edu.iftm.atividadeComplementar.domains.Atividade;
 import br.edu.iftm.atividadeComplementar.services.AtividadeService;
 
 @RestController
-@RequestMapping(value="/atividade")
+@RequestMapping(value="/atividades")
 public class AtividadeResource {
 	
 	@Autowired
 	private AtividadeService service;
 	
-	@RequestMapping(value="like/{nome}",method=RequestMethod.GET)
+	@RequestMapping(value="like/nome}",method=RequestMethod.GET)
 	public ResponseEntity<?> findByNome(@PathVariable String nome) {
-		List<Atividade> atividade = service.buscar(nome);
-		return ResponseEntity.ok().body(atividade);
+		List<Atividade> atividades = service.buscar(nome);
+				return ResponseEntity.ok().body(atividades);
 	}
 	
-	@RequestMapping(value="{ra}",method=RequestMethod.GET)
-	public ResponseEntity<?> findByRa(@PathVariable Integer codigo) {
-		Optional<Atividade> atividade = service.buscarRa(codigo);
-		return ResponseEntity.ok().body(codigo);
+	@RequestMapping(value="{id}",method=RequestMethod.GET)
+	public ResponseEntity<?> findByRa(@PathVariable Integer id) {
+		Optional<Atividade> atividade = service.buscarRa(id);
+		return ResponseEntity.ok().body(atividade);
 	}
 
 }
