@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import br.edu.iftm.atividadeComplementar.domains.Atividade;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) //para subir o contexto do test senão nao tem jeito de testar
 @SpringBootTest
 public class AtividadeRepositoryTest {
 	
@@ -28,7 +28,7 @@ public class AtividadeRepositoryTest {
 	@Test
 	public void testaAtividadeOficinaBarulho() {
 		List<Atividade> c = repository.findByNomeContaining("Oficina do barulho");
-		assertThat(c.size()).isEqualTo(0);
+		assertThat(c.size()).isEqualTo(1);
 	}
 
 	@Test
