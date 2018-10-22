@@ -93,6 +93,11 @@ public class Atividade implements Serializable{
 
 	public void setPercentualPorAtivcodigoade(Integer percentualPorAtivcodigoade) {
 		this.percentualPorAtivcodigoade = percentualPorAtivcodigoade;
+	}
+
+	public Integer getHorasAproveitadasPorAtividade(Integer quantidadeHorasCurso) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 
 }

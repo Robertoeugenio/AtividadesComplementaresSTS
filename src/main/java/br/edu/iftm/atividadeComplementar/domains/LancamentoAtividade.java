@@ -44,6 +44,20 @@ public class LancamentoAtividade {
 			return ano + "-1";
 		}
 	}
+	
+	public Integer getHorasAproveitadas(Atividade atividade,Integer quantidadeHorasCurso,Integer quantidadeHorasfeitas,Date dataFim) {
+		if(atividade.getNome().equals("palestra")) {
+			if(quantidadeHorasfeitas>atividade.getHorasAproveitadasPorAtividade(quantidadeHorasCurso)) 						
+				return atividade.getHorasAproveitadasPorAtividade(quantidadeHorasCurso);
+			return 1;
+		}
+		else if(quantidadeHorasfeitas>atividade.getValorLimiteHorasAtividade(quantidadeHorasCurso))
+			return atividade.getValorLimiteHorasAtividade(quantidadeHorasCurso);
+		return 1;
+				
+	}
+
+	
 
 	public Long getCodigo() {
 		return codigo;

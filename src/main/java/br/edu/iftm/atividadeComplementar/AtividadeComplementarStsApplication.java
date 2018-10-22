@@ -29,8 +29,8 @@ public class AtividadeComplementarStsApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Aluno aluno1 = new Aluno((long) 0001, "Fransciscano");
-		Aluno aluno2 = new Aluno((long) 0002, "Jerosmarildo");
+		Aluno aluno1 = new Aluno((long) 11115, "stalone");
+		Aluno aluno2 = new Aluno((long) 11116, "rambo");
 
 		List<Aluno> alunos = new ArrayList<>();
 		alunos.add(aluno1);

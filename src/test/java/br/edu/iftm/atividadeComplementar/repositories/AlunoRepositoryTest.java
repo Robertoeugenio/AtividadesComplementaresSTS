@@ -3,6 +3,7 @@ package br.edu.iftm.atividadeComplementar.repositories;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,5 +38,12 @@ public class AlunoRepositoryTest {
 		List<Aluno> c = repository.findByNomeContaining("Fransciscano");
 		assertThat(c.size()).isEqualTo(0);
 	}
+	
+	@Test
+	public void testaIdAluno() {
+		Optional<Aluno> alunos = repository.findById((long) 11114);
+		assertThat(alunos.get().getAtividades().equals("c"));
+	}
+	
 
 }
